@@ -1,0 +1,81 @@
+{
+    "id": 1,
+      "question": "Do you think that Scrubs is one of the best TV series ever made?",
+        "answers": [{"answer_id": 1, "answer_text": "Yes", "answer_votes": 24235 }, {"answer_id": 2, "answer_text": "No", "answer_votes": 1430 }],
+
+          "comments": [
+
+
+
+                {"comment_id": 1, "comment_op": 1, "comment_text": "Scrubs made me cry like a baby. One of the best scenes was when Dorian's voiceover described the thoughts he was having at the time.", "comment_for": 23, "comment_against": 2, "replies": [
+                      {"reply_id": 1, "reply_op": 1, "reply_text": "Man, that was like every scene in every show.", "reply_for": 0, "reply_against": 0},
+                          {"reply_id": 2, "reply_op": 1, "reply_text": "True fan right there. Every scene was fucking brilliant, and people who say it wasn't funny need their sense of humour operated on by Turk", "reply_for": 2, "reply_against": 0},
+                              {"reply_id": 3, "reply_op": 1, "reply_text": "J.D man...", "reply_for": 0, "reply_against": 2},
+                                  {"reply_id": 4, "reply_op": 2, "reply_text": "Only fagets cry like babbies you fuckin cun why you cray like babby? Scrubs is so gai i hat mysel everytime i hear it's name mentioned in casual conversation.", "reply_for": 1, "reply_against": 1},
+                                      {"reply_id": 5, "reply_op": 1, "reply_text": "It was pretty heavy handed when it came to emotional moments but it more than overcame this by how likable the characters were. Special mention to Zach Braff. Definitely shed a tear more than once.", "reply_for": 1, "reply_against": 0},
+                                          {"reply_id": 6, "reply_op": 2, "reply_text": "Cried when Laverne died. That was painful.", "reply_for": 0, "reply_against": 0},
+                                              {"reply_id": 7, "reply_op": 2, "reply_text": "A famous student of film said that voiceovers were cheating...", "reply_for": 4, "reply_against": 0},
+                                                  {"reply_id": 8, "reply_op": 1, "reply_text": "I agree like a motherfucker", "reply_for": 0, "reply_against": 0}]},
+
+              
+
+              {"comment_id": 2, "comment_op": 1, "comment_text": "Inspired comedy. When it first came out I thought they were just another medical drama spinoff trying to cash in on the public's love of doctors. Watched the pilot epidode and was hooked for years", "comment_for": 12, "comment_against": 0, "replies": [
+                    {"reply_id": 1, "reply_op": 2, "reply_text": "Just because it wasn't a spinoff doesn't mean it wasn't shit", "reply_for": 0, "reply_against": 3},
+                        {"reply_id": 2, "reply_op": 1, "reply_text": "True fan right there. Every scene was fucking brilliant, and people who say it wasn't funny need their sense of humour operated on by Turk", "reply_for": 2, "reply_against": 0}]},
+
+                  
+
+                  {"comment_id": 3, "comment_op": 1, "comment_text": "Honestly can't think of another medical comedy on the same level. The characters were all perfectly casted and the tone was very much unique.", "comment_for": 12, "comment_against": 0, "replies": []},
+
+                      
+
+                      {"comment_id": 4, "comment_op": 1, "comment_text": "Another comment on scrubs.", "comment_for": 12, "comment_against": 0, "replies": []},
+
+                          
+
+                          {"comment_id": 5, "comment_op": 1, "comment_text": "I heard an annoying buzzing and pulled my head out from under my blankets. 7:23?! I would barley make it to practice. I had a bad habit of sleeping in.  I jumped out of bed and shimmied into some grey shorts, a hot pink sports bra, blue tank, and my nike frees. As I put my hair in a sloppy ponytail I ran out the door. As I started to jog to my high school, I thought about how people would always ask me why in the world I ran for fun. They didn't understand though. It was such a good way to relieve stress. And they didn't know how amazing it felt to feel such power that my legs could produce.", "comment_for": 12, "comment_against": 0, "replies": []},
+
+                              
+
+                              {"comment_id": 6, "comment_op": 1, "comment_text": "I showed up by the tennis courts. My team was still stretching, thankfully. We all knew that if we were late, we would have to stay and do an intense ab work out. I talked to Jenna and Lauren, my two best friends, like I did every morning, and then a girl who bugged the crap out of me came up to me.", "comment_for": 12, "comment_against": 0, "replies": []},
+
+                                  
+
+                                  {"comment_id": 7, "comment_op": 1, "comment_text": "Even when he tried out for x-factor, we still keep in touch. But ever since One Direction happened, I hadn't heard much from him. Not that that wasn't cool, I absolutely love their music. But I had to wonder, did I really bore him?", "comment_for": 12, "comment_against": 0, "replies": []},
+
+                                      
+
+                                      {"comment_id": 8, "comment_op": 2, "comment_text": "Cleaning always helped my feel relaxed for some reason. Organizing things helped me forget about the stressful stuff in life and I like doing it.  I heard my phone start to ring from my bedroom. I ran to my bed and tripped over my shoes. I moaned and got up jumping onto my bed to get to my side drawer.", "comment_for": 12, "comment_against": 0, "replies": [
+                                            {"reply_id": 1, "reply_op": 1, "reply_text": "Man, that was like every scene in every show.", "reply_for": 0, "reply_against": 0},
+                                                {"reply_id": 2, "reply_op": 1, "reply_text": "True fan right there. Every scene was fucking brilliant, and people who say it wasn't funny need their sense of humour operated on by Turk", "reply_for": 2, "reply_against": 0},
+                                                    {"reply_id": 3, "reply_op": 1, "reply_text": "I hung up and immediately hated what I had said. It should have been nicer, or maybe funnier, or just different. Ugh I hated leaving voice mails. What if he thought I sounded weird? Or if he was disappointed that I called? I told my self I was over reacting and went to clean my living room.", "reply_for": 0, "reply_against": 2},
+                                                        {"reply_id": 4, "reply_op": 2, "reply_text": "Man, that was like every scene in every show.", "reply_for": 1, "reply_against": 1},
+                                                            {"reply_id": 5, "reply_op": 1, "reply_text": "Man, that was like every scene in every show.", "reply_for": 1, "reply_against": 0},
+                                                                {"reply_id": 6, "reply_op": 2, "reply_text": "Man, that was like every scene in every show.", "reply_for": 0, "reply_against": 0},
+                                                                    {"reply_id": 7, "reply_op": 2, "reply_text": "Man, that was like every scene in every show.", "reply_for": 4, "reply_against": 0},
+                                                                        {"reply_id": 8, "reply_op": 1, "reply_text": "Man, that was like every scene in every show.", "reply_for": 0, "reply_against": 0}]},
+
+                                          
+
+                                          {"comment_id": 9, "comment_op": 2, "comment_text": "Scrubs made me cry like a baby. One of the best scenes was when Dorian's voiceover described the thoughts he was having at the time.", "comment_for": 12, "comment_against": 0, "replies": []},
+
+                                              
+
+                                              {"comment_id": 10, "comment_op": 2, "comment_text": "Scrubs made me cry like a baby. One of the best scenes was when Dorian's voiceover described the thoughts he was having at the time.", "comment_for": 12, "comment_against": 0, "replies": []},
+
+                                                  
+
+                                                  {"comment_id": 11, "comment_op": 2, "comment_text": "Scrubs made me cry like a baby. One of the best scenes was when Dorian's voiceover described the thoughts he was having at the time.", "comment_for": 12, "comment_against": 0, "replies": []},
+
+                                                      
+
+                                                      {"comment_id": 12, "comment_op": 2, "comment_text": "Scrubs made me cry like a baby. One of the best scenes was when Dorian's voiceover described the thoughts he was having at the time.", "comment_for": 12, "comment_against": 0, "replies": []},
+
+                                                          
+
+                                                          {"comment_id": 13, "comment_op": 2, "comment_text": "Scrubs made me cry like a baby. One of the best scenes was when Dorian's voiceover described the thoughts he was having at the time.", "comment_for": 12, "comment_against": 0, "replies": []},
+
+                                                              
+
+                                                              {"comment_id": 14, "comment_op": 2, "comment_text": "Scrubs made me cry like a baby. One of the best scenes was when Dorian's voiceover described the thoughts he was having at the time.", "comment_for": 12, "comment_against": 0, "replies": []}]
+}

@@ -1,0 +1,162 @@
+@font-face
+{
+	font-family: Gravity;
+	src: url(/fonts/Gravity-Book.ttf);
+}
+
+@font-face
+{
+	font-family: GravityB;
+	src: url(/fonts/Gravity-Bold.ttf);
+}
+
+@font-face
+{
+	font-family: GravityBI;
+	src: url(/fonts/Gravity-Bold-Italic.ttf);
+}
+
+@font-face
+{
+	font-family: GravityI;
+	src: url(/fonts/Gravity-Book-Italic.ttf);
+}
+
+*
+{
+	font-family: Gravity;
+}
+
+
+
+.mquestion, .question-nav, .answer-left, .answer-right, .percent-left, .percent-right
+{
+  font-family: GravityB;
+}
+
+.answer-left, .answer-right
+{
+  margin: 0;
+}
+
+.mini
+{
+  height: 10px;
+}
+
+br.micro
+{
+  height: 100px;
+}
+
+body
+{
+  background-color: #FFFFFF;
+}
+
+p.percent-left, p.percent-right
+{
+  font-size: 1.5em;
+  vertical-align: middle;
+  line-height: 100%;
+}
+
+.votes-left, .votes-right
+{
+  font-style: italic;
+  vertical-align: middle;
+  line-height: 100%;
+}
+
+#results-holder
+{
+}
+#mayn
+{
+}
+
+.lefty, .righty
+{
+  display: inline-block;
+  height: 80px;
+  width: 50%;
+  cursor: pointer;
+}
+
+.lefty
+{
+  background-color: #80B3FF;
+}
+
+.lefty:hover
+{
+  background-color: #2222FF;
+}
+
+.righty
+{
+  background-color: #FF5555;
+}
+
+.righty:hover
+{
+  background-color: #FF2222;
+}
+
+.input-area
+{
+  display: block;
+}
+
+#results-holder, #mayn, #stats, #premayn
+{
+  display: none;
+}
+
+ol
+{
+  border-style: dashed;
+}
+
+#main-bar-right
+{
+
+}
+
+#main-bar-right
+{
+
+}
+
+.approvalbar
+{
+  width: 70%;
+  height: 10px;
+  display: block;
+  margin-top: 5px;
+}
+
+.infobox
+{
+  width: 95%;
+  height: 20px;
+  display: block;
+  margin: auto;
+}
+
+.rightcol 
+{
+  background-color: #FF5555;
+  outline-bottom-color: #000;
+}
+
+.leftcol
+{
+  background-color: #80B3FF;
+  outline-bottom-color: #000;
+}
+
+*
+{
+  z-index: -100;
+}

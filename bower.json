@@ -1,0 +1,22 @@
+{
+  "name": "hour",
+  "version": "0.0.0",
+  "authors": [
+    "Lawrence Ajadi <jazzmanlarry@outlook.com>"
+  ],
+  "main": "app.js",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "*",
+    "jquery": "*",
+    "jquery-ui": "*",
+    "jquery-autosize": "*"
+  }
+}

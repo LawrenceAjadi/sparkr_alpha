@@ -1,0 +1,22 @@
+mixin stylesheets
+  link(rel='stylesheet', href='/lib/bootstrap/dist/css/bootstrap.css')
+  link(rel='stylesheet', href='/css/app.css')
+  link(rel='stylesheet', href='/css/fonts.css')
+
+mixin scripts
+  script(src='/lib/jquery/dist/jquery.js')
+  script(src='/lib/jquery-ui/jquery-ui.js')
+  script(src='/lib/bootstrap/dist/js/bootstrap.js')
+  script(src='/lib/jquery-autosize/jquery.autosize.js')
+
+doctype html
+html
+  head
+    title Sparkr
+    +stylesheets()
+    +scripts()
+    link(rel='shortcut icon', href='/img/favicon.ico')
+  body
+    include components/navbar
+    block scripts
+    block content

@@ -1,0 +1,89 @@
+{
+  "id": 1,
+  "type": "yn",
+  "featured": false,
+  "text": "Do you think that Louis C.K is a great comedian?",
+  "A": "Yes",
+  "AVotes": 572,
+  "AMax": 7,
+  "AMin": -3,
+  "B": "No",
+  "BVotes": 312,
+  "BMax": 6,
+  "BMin": -4,
+  "comments": [{
+    "id": 1,
+    "text": "I really think he's the most overrated comic in showbusiness at the moment. Can't think of a single live show of his that has made me laugh",
+    "stance": "B",
+    "uVotes": 6,
+    "dVotes": 2,
+    "replies": [{
+      "id": 1,
+      "text": "You, sir, have absolutely no taste in comedy",
+      "stance": "Against",
+      "uVotes": 2,
+      "dVotes": 0
+    },{
+      "id": 2,
+      "text": "Obvioulsy man, fucking Chris Rock is 1000 times better and funnier",
+      "stance": "For",
+      "uVotes": 0,
+      "dVotes": 0
+    },{
+      "id": 3,
+      "text": "Bitch, please. Louis is a comic genius. He's so honest and yet so brutal, and the fact that he can balance these two aspects of his comedy without one being overpowering is testament to his comedic talents",
+      "stance": "Against",
+      "uVotes": 4,
+      "dVotes": 1
+    }]},{
+    "id": 2,
+    "text": "Louie is the evidence. He's obviously an extremely talented and capable comedian, but his abilities as an artist are what makes him stand out in my opinion. There are scenes in his television shows that are amongst the most poignant moments ever witnessed on screen, and the fact that he looks at issues in such an enlightening, comical way... outstanding comic.",
+    "stance": "A",
+    "uVotes": 7,
+    "dVotes": 0,
+    "replies": [{
+      "id": 1,
+      "text": "+1 to you dude",
+      "stance": "For",
+      "uVotes": 0,
+      "dVotes": 0
+    }]},{
+    "id": 3,
+    "text": "Amazing comedian",
+    "stance": "A",
+    "uVotes": 2,
+    "dVotes": 0,
+    "replies": []
+    },{
+    "id": 4,
+    "text": "His shameless special confirmed it",
+    "stance": "A",
+    "uVotes": 1,
+    "dVotes": 0,
+    "replies": []
+    },{
+    "id": 5,
+    "text": "Disagree, but I don't think such a comedian exists. How can one say that a person who tells jokes for a living is better than another based purely on how funny he is? Surely comedy is purely based on taste rather than talent?",
+    "stance": "B",
+    "uVotes": 1,
+    "dVotes": 0,
+    "replies": []
+    },{
+    "id": 6,
+    "text": "He's a cross between George Carlin and Jerry Seinfeld.",
+    "stance": "A",
+    "uVotes": 1,
+    "dVotes": 0,
+    "replies": []
+    },{
+    "id": 7,
+    "text": "Please stop this ridiculousness; my 12-year-old daughter is funnier than Louis C.K",
+    "stance": "B",
+    "uVotes": 0,
+    "dVotes": 0,
+    "replies": []
+    }],
+  "facts": [{ "text": "100% of respondents are from Lawrence Ajadi's imagination" }]  
+
+}
+

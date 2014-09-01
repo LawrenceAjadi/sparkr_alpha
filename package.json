@@ -1,0 +1,19 @@
+{
+  "name": "sparkr_alpha",
+  "version": "0.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Lawrence Ajadi",
+  "license": "ISC",
+  "dependencies": {
+    "jade": "*",
+    "coffee-script": "*",
+    "express": "*",
+    "bower": "*",
+    "mongoose": "*",
+    "serve-favicon": "*"
+  }
+}

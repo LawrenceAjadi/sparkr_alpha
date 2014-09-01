@@ -1,0 +1,361 @@
+body 
+{
+  padding-top: 50px;
+}
+
+*
+{
+  word-wrap: break-word;
+}
+
+.aagainst
+{
+  border-top-color: #DDDDDD;
+  border-bottom-color: #DDDDDD;
+  background-color: #FAFAFA;
+}
+
+.ffor
+{
+  border-top-color: #999999;
+  border-bottom-color: #999999;
+  background-color: #FAFAFA;
+}
+
+#leftie, #rightie, #sprk
+{
+  border-style: none;
+  font-size: 26px;
+  background-color: #FFFFFF;
+}
+
+#sprk
+{
+  margin: none;
+}
+
+#theleft, #theright,
+{
+}
+
+#userreason
+{
+  width: 95%;
+  min-height: 60px;
+  border-width: 2px;
+  border-style: solid;
+  margin:auto;
+  position: relative;
+  border-radius: 0px;
+}
+
+#submitbutton
+{
+  position: relative;
+  margin: auto;
+  display: block;
+}
+
+.cbox, .rreply
+{
+  width: 95%;
+  min-height: 60px;
+  border-width: 2px;
+  border-style: solid;
+  margin: auto;
+  cursor: pointer;
+  border-radius: 0px;
+}
+
+.rreply, #replyreason
+{
+  width: 70%;
+  border-width: 0px;
+  border-style: none;
+  border-top-style: solid;
+  border-top-width: 3px;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-radius: 0px;
+}
+
+.rreply > p
+{
+  font-size: 1.1em;
+}
+
+textarea
+{
+  resize: none;
+  font-size: 1.25em;
+  opacity: 1;
+}
+
+#userreason
+{
+  font-size: 1.25em;
+}
+
+.cboxleft
+{
+  border-color: #FF2222;
+}
+
+.cboxright
+{
+  border-color: #2222FF;
+}
+
+p
+{
+  font-size: 1.25em;
+  text-align: left;
+}
+
+br
+{
+  height: 15px;
+}
+
+.row-fluid div 
+{
+  -webkit-transition: width 0.3s ease;
+  -moz-transition: width 0.3s ease;
+  -o-transition: width 0.3s ease;
+  transition: width 0.3s ease;
+}
+
+#stats
+{
+  display: block;
+  border-width: 4px;
+  border-color: #EEEEEE;
+}
+
+.home-holder
+{
+  height: 50px;
+}
+
+img.logoo
+{
+  height: 50px;
+}
+
+.navbar
+{
+  max-height: 50px;
+  background-color: #222222;
+}
+
+/* Comment Box CSS */
+
+.cbox > p
+{
+  display: block;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.ccommentleft
+{
+  background-color: #FFFFFF;
+  border-color: #80B3FF;
+}
+
+.ccommentleft > p
+{
+  color: #111111;
+}
+
+.csparkleft
+{
+  background-color: #80B3FF;
+  border-color: #80B3FF;
+}
+
+.csparkleft > p
+{
+  color: #FFFFFF;
+}
+
+.ccommentright
+{
+  background-color: #FFFFFF;
+  border-color: #FF5555;
+}
+
+.ccommentright > p
+{
+  color: #111111;
+}
+
+.csparkright
+{
+  background-color: #FF5555;
+  border-color: #FF5555;
+}
+
+.csparkright > p
+{
+  color: #FFFFFF;
+}
+
+html
+{
+  overflow: hidden;
+}
+
+#mayn
+{
+  height: 450px;
+  overflow-y: scroll;
+}
+
+#premayn
+{
+  height: 300px;
+  overflow-y: scroll;
+}
+
+#stats
+{
+  height: 600px;
+  overflow-y: scroll;
+}
+
+.commentnum
+{
+  color: #AAAAAA;
+}
+
+.bar-right
+{
+  width: 100%;
+  height: 25px;
+  max-height: 25px;
+  display: block;
+  background-color: #FF5555;
+  margin: auto;
+  position: relative;
+}
+.bar-left
+{
+  width: 50%;
+  height: 25px;
+  display: block;
+  background-color: #80B3FF;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.question-nav
+{
+  text-align: center;
+  color: #FFFFFF;
+  display: inline;
+  margin: auto;
+  font-size: 1.5em;
+}
+
+.answer-left
+{
+  color: #80B3FF;
+}
+
+.answer-right
+{
+  color: #FF5555;
+}
+
+.btn
+{
+  border-radius: 0px;
+  margin-top: 5px;
+  border-width: 3px;
+  color: #222222;
+  font-weight: bold;
+}
+
+.btn:hover
+{
+  background-color: #FFF;;
+  border-color: #FFFF40;
+  color: #CCCC40;
+}
+
+.btn-right
+{
+  border-color: #FF5555;
+}
+
+.btn-left
+{
+  border-color: #80B3FF;
+}
+
+#bg 
+{
+  position: fixed; 
+  top: 0; 
+  left: 0;
+  z-index: -800;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.whiter, .dimmer
+{
+  width: 100%;
+  height: 100%;
+  display: none;
+  position: fixed;
+  top: 0%;
+  left: 0%;
+}
+
+.whiter
+{
+  background-color: rgba(255,255,255,0.8);
+}
+
+.dimmer
+{
+  background-color: #111111;
+  z-index: 1;
+}
+
+.gleft, .gright
+{
+  margin: 0px;
+}
+
+.ghright
+{
+  color: #FF5555;
+}
+
+.ghleft
+{
+  color: #80B3FF;
+}
+
+#whybox
+{
+  padding: 8px;
+}
+.cboxleft, .cboxright, #submitbutton, .lefty, .righty
+{
+  -webkit-box-shadow: 2px 2px 5px 0px rgba(180, 180, 180, 0.75);
+  -moz-box-shadow:    2px 2px 5px 0px rgba(180, 180, 180, 0.75);
+  box-shadow:         2px 2px 5px 0px rgba(180, 180, 180, 0.75);
+}
+
+.approvalbar, .bar-right
+{
+  -webkit-box-shadow: 1px 1px 3px 0px rgba(180, 180, 180, 0.5);
+  -moz-box-shadow:    1px 1px 3px 0px rgba(180, 180, 180, 0.5);
+  box-shadow:         1px 1px 3px 0px rgba(180, 180, 180, 0.5);
+}
+
