@@ -66,14 +66,14 @@ var generateCommentDivs = function(data) {
         if (data.comments[i].stance == 'A') {
 
             $('#leftcomments').append('<div class="cbox cboxleft ccommentleft" id="c' + data.comments[i].id + '"><p>' + data.comments[i].text + '</p></div>');
-            $('#leftcomments').append('<div class="infobox"><div class="approvalbar leftcol pull-left" id="ab' + data.comments[i].id + '"></div><p class="commentnum pull-right text-right" id="' + 12 + '">Spark</p></div>');
+            $('#leftcomments').append('<div class="infobox"><div class="approvalbar leftcol pull-left" id="ab' + data.comments[i].id + '"></div><p class="commentnum pull-right text-right" id="' + 12 + '"></p></div>');
             $('#leftcomments').append('<br>');
 
             leftComments.push(data.comments[i].id);
         } else if (data.comments[i].stance == 'B') {
 
             $('#rightcomments').append('<div class="cbox cboxright ccommentright" id="c' + data.comments[i].id + '"><p>' + data.comments[i].text + '</p></div>');
-            $('#rightcomments').append('<div class="infobox"><p class="commentnum pull-left text-left" id="' + 12 + '">Spark</p><div class="approvalbar rightcol pull-right" id="ab' + data.comments[i].id + '"></div></div>');
+            $('#rightcomments').append('<div class="infobox"><p class="commentnum pull-left text-left" id="' + 12 + '"></p><div class="approvalbar rightcol pull-right" id="ab' + data.comments[i].id + '"></div></div>');
             $('#rightcomments').append('<br>');
 
             rightComments.push(data.comments[i].id);
@@ -123,14 +123,18 @@ var loadReplySection = function(id) {
     $('#stats').append('<div class="col-md-4 text-right"><button class="btn btn-right" id="rightie">[-]</button><br></div>');
     $('#stats').append('<div class="col-md-6 text-left" style="color: #999999; height: 50px"><p class="text-left">' + Data.comments[id - 1].uVotes + ' agree' + '</p></div>');
     $('#stats').append('<div class="col-md-6 text-right" style="color: #999999; height: 50px" id="here"><p class="text-right">' + Data.comments[id - 1].dVotes + ' disagree' + '</p><br></div>');
-    for (var i = 0; i < Data.comments[id - 1].replies.length; i++) {
+    /*for (var i = 0; i < Data.comments[id - 1].replies.length; i++) {
         $('#stats').append('<div class="col-md-12" style="height: 7px"</div>');
         if (Data.comments[id - 1].replies[i].stance == 'For') {
             $('#stats').append('<div class="rreply pull-left ffor"><p><span>[+]</span> ' + Data.comments[id - 1].replies[i].text + '</p></div>');
         } else if (Data.comments[id - 1].replies[i].stance == 'Against') {
             $('#stats').append('<div class="rreply pull-right aagainst"><p><span>[-]</span> ' + Data.comments[id - 1].replies[i].text + '</p></div>');
         }
-    }
+    }*/
+
+    //Example of prespark 
+    $('#stats').append('<div class="col-md-12 minispark"><div class="col-md-12"><p class="text-center msparktitle" style="border-bottom-style: solid; border-bottom-color: #FF5; border-bottom-width: 6px; padding-bottom: 10px">Do you think I should get a move on and finish this prototype?</p></div><div class="col-md-12 subminispark"><div class="col-md-6 pull-left"><button class="btn btn-sprk btn-sprk-left marg-auto">Certainly</button></div><div class="col-md-6 pull-right"><button class="btn btn-sprk btn-sprk-right marg-auto">Not at all</button></div></div></div><div class="col-md-12"><br></br></div>');
+
 };
 
 //Displays ReplySection and calls loadReplySection to fill it(for left comments)
