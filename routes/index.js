@@ -57,12 +57,19 @@ router.get('/tester', function(req,res) {
 });
 
 
-/*
-//When user clicks vote, it should aim at /:id/uservote to save to db
-router.post('/:id/uservote', function(req, res) {
 
+//When user clicks vote, it should aim at /:id/uservote to save to db
+router.post('/11/uservote', function(req, res) {
+  var db = req.db;
+  var collection = db.get('tester');
+  if(req.body.stance == "A") {
+  	collection.update({"id": 1}, { $inc : { "AVotes": 1 } });
+  } else if(req.body.stance == "B") {
+  	collection.update({"id": 1}, { $inc : { "BVotes": 1 } });
+  }
 });
 
+/*
 //When user submits comments they wrote/agreed with, aim here
 router.post('/:id/reasons', function(req, res) {
 

@@ -15,6 +15,7 @@
     "bower": "*",
     "monk": "*",
     "mongodb": "*",
-    "serve-favicon": "*"
+    "serve-favicon": "*",
+    "body-parser": "*"
   }
 }

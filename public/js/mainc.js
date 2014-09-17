@@ -335,6 +335,17 @@ var mainVote = function() {
             $('#inputzone').fadeOut(400);
             once = 1;
         //'SEND JSON TO DATABASE OF VOTE INFO' CODE HERE
+            $.ajax({
+                url : "11/uservote",
+                type: "POST",
+                data: {stance: "A"},
+                success: function(data, textStatus, jqXHR)
+                {
+                },
+                error: function (jqXHR, textStatus, errorThrown)
+                {
+                }
+            });
             loadPreMain('left');
             generatePreCommentDivs(Data, 'left');
             setTimeout(function() {
@@ -349,6 +360,18 @@ var mainVote = function() {
             $('#inputzone').fadeOut(400);
             once = 1;
         //'SEND JSON TO DATABASE OF VOTE INFO' CODE HERE
+
+            $.ajax({
+                url : "11/uservote",
+                type: "POST",
+                data: {stance: "B"},
+                success: function(data, textStatus, jqXHR)
+                {
+                },
+                error: function (jqXHR, textStatus, errorThrown)
+                {
+                }
+            });
             
             generatePreCommentDivs(Data, 'right');
             loadPreMain('right');
@@ -463,9 +486,26 @@ $(document).ready(function() {
     //---------------------
     scaler();
     //TEMP: Store json summary data in global var Data 
-    $.getJSON('js/updated.json', function(data) {
-        Data = data;
-    });
+    $.ajax({
+        url: "/11",
+        type: 'get',
+        dataType: 'json',
+        success: function(data) {
+            Data = data;
+            console.log(Data.text);
+            console.log(Data.A);
+            console.log(Data.B);
+            console.log(Data.AMax);
+            console.log(Data.BMax);
+            console.log(Data.AMin);
+            console.log(Data.BMin);
+            console.log(Data.AVotes);
+            console.log(Data.BVotes);
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) {
+            console.log('error', errorThrown);
+        }
+    })
     
     //TEMP: Roughly after json data is loaded, use it to generate commentdivs, question data etc (wait a few seconds)
     setTimeout(function() {
