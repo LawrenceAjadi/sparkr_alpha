@@ -14,7 +14,7 @@
 
   monk = require('monk');
 
-  db = monk('localhost:27017/sample');
+  db = monk('localhost:27017/pre');
 
   routes = require('./routes/index');
 

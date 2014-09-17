@@ -1,0 +1,64 @@
+extends layout
+
+var Data = #{Data}
+
+block scripts
+  script(src='js/mainc.js')
+
+  block content
+  .row-fluid.thebody
+    #inputzone.col-md-8.col-lg-offset-2
+      br
+      br
+      br
+      br
+      br
+      br
+      br
+      h1.mquestion(style='text-align: center') Do you think...?
+      br
+      br
+      br
+      br
+      .input-area.col-md-12
+        .lefty.pull-left
+          h2#lefttest.text-left(style='color: white') Yes
+        .righty.pull-right
+          h2.text-right(style='color: white') No
+    #stats.col-md-4.pull-right.visible-md
+    #results-holder.col-md-8.col-lg-offset-2
+      .col-md-12
+        h3.mquestion(style='text-align: center') Do you think...?
+        br.mini
+      .col-md-12
+        .col-md-2.pull-left
+          h2.text-right.answer-left Yes
+        .col-md-8
+          #main-bar-right.bar-right
+            #main-bar-left.bar-left
+        .col-md-2.pull-right
+          h2.text-left.answer-right No
+      .col-md-12(style='height: 12px; display: block')
+      .col-md-12
+        .col-md-6.pull-left
+          p.text-left.percent-left(style='display: inline-block') 97%
+          p.text-left(style='display: inline-block') &nbsp
+          p.text-left.votes-left(style='display: inline-block') (2545 Votes)
+        .col-md-6.pull-right
+          p.text-right.percent-right.pull-right(style='display: inline-block')= '3%'
+          p.text-right.pull-right(style='display: inline-block') &nbsp
+          p.text-right.votes-right.pull-right(style='display: inline-block') (187 Votes)
+      .col-md-12(style='height:12px; display: block')
+    #donezone.col-md-8.col-lg-offset-2
+    #whybox.col-md-8.col-lg-offset-2
+      #theleft.pull-left
+      #theright.pull-right
+    #premayn.col-md-8.col-lg-offset-2
+      br
+      #preleftcomments.col-md-6
+      #prerightcomments.col-md-6
+    #mayn.col-md-8.col-lg-offset-2
+      br
+      #leftcomments.col-md-6
+      #rightcomments.col-md-6
+

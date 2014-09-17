@@ -5,6 +5,10 @@ router.get('/yesnob', function(req,res) {
   return res.render('ynpollb');
 });
 
+router.get('/yesnoc', function(req,res) {
+  return res.render('ynpollc');
+});
+
 //when widget is loaded show this
 router.get('/widget_a', function(req,res) {
 
@@ -13,7 +17,7 @@ router.get('/widget_a', function(req,res) {
 //When poll with ID id loads, send poll summary to client
 router.get('/1', function(req,res) {
   var db = req.db;
-  var collection = db.get('samplepoll');
+  var collection = db.get('tester');
 
   collection.find(function(e,docs) {
   	res.send(docs);
@@ -27,19 +31,14 @@ router.get('/1', function(req,res) {
 router.get('/11', function(req,res) {
 
   var db = req.db;
-  var collection = db.get('samplepolll');
+  var collection = db.get('tester');
 
-  var tessa;
 
   collection.findOne({}, function(err, cursor) {
-  	console.log("cursor "+cursor);
 
-  	console.log("cursor man 1 "+cursor.item);
-  	console.log("cursor man 1 "+cursor.namer);
-  	console.log("cursor man 1 "+cursor.item);
+  	console.log(cursor.text);
 
-  	//console.log("cursor array "+tessa);
-  	res.jsonp(cursor.item);
+  	res.json({ "text" : cursor.text, "A" : cursor.A, "B" : cursor.B , "AMin": cursor.AMin, "AMax": cursor.AMax, "BMin": cursor.BMin, "BMax" : cursor.BMax, "AVotes" : cursor.AVotes, "BVotes" : cursor.BVotes , "comments" : cursor.comments});
   });
 
 
