@@ -359,11 +359,11 @@ html
   box-shadow:         1px 1px 3px 0px rgba(180, 180, 180, 0.5);
 }
 
-.minispark
+.minispark, .rreply
 {
   border-style: solid;
   border-width: 2px;
-  border-color: #444;
+  border-color: #555;
   padding: 4px;
 }
 
@@ -394,4 +394,26 @@ html
 .btn-sprk-right
 {
   background-color: #333333;
+}
+
+.squarer
+{
+  border-width: 1px;
+  -webkit-border-radius: 0px !important;
+  -moz-border-radius: 0px !important;
+  -o-border-radius: 0px !important;
+  border-radius: 0px !important;
+}
+
+.sparkaddon
+{
+  background-color: #666666;
+  color: #FF5;
+  font-weight: bold;
+}
+
+.sparkbuttonn
+{
+  background-color: #666666;
+  color: #FF5;
 }

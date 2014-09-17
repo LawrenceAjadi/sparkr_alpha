@@ -123,17 +123,22 @@ var loadReplySection = function(id) {
     $('#stats').append('<div class="col-md-4 text-right"><button class="btn btn-right" id="rightie">[-]</button><br></div>');
     $('#stats').append('<div class="col-md-6 text-left" style="color: #999999; height: 50px"><p class="text-left">' + Data.comments[id - 1].uVotes + ' agree' + '</p></div>');
     $('#stats').append('<div class="col-md-6 text-right" style="color: #999999; height: 50px" id="here"><p class="text-right">' + Data.comments[id - 1].dVotes + ' disagree' + '</p><br></div>');
-    /*for (var i = 0; i < Data.comments[id - 1].replies.length; i++) {
+    for (var i = 0; i < Data.comments[id - 1].replies.length; i++) {
         $('#stats').append('<div class="col-md-12" style="height: 7px"</div>');
         if (Data.comments[id - 1].replies[i].stance == 'For') {
             $('#stats').append('<div class="rreply pull-left ffor"><p><span>[+]</span> ' + Data.comments[id - 1].replies[i].text + '</p></div>');
         } else if (Data.comments[id - 1].replies[i].stance == 'Against') {
             $('#stats').append('<div class="rreply pull-right aagainst"><p><span>[-]</span> ' + Data.comments[id - 1].replies[i].text + '</p></div>');
         }
-    }*/
+    }
+    $('#stats').append('<div class="col-md-12" style="height: 7px"</div>');
 
     //Example of prespark 
     $('#stats').append('<div class="col-md-12 minispark"><div class="col-md-12"><p class="text-center msparktitle" style="border-bottom-style: solid; border-bottom-color: #FF5; border-bottom-width: 6px; padding-bottom: 10px">Do you think I should get a move on and finish this prototype?</p></div><div class="col-md-12 subminispark"><div class="col-md-6 pull-left"><button class="btn btn-sprk btn-sprk-left marg-auto">Certainly</button></div><div class="col-md-6 pull-right"><button class="btn btn-sprk btn-sprk-right marg-auto">Not at all</button></div></div></div><div class="col-md-12"><br></br></div>');
+
+    //Create spark experiment
+    $('#stats').append('<div class="col-md-12 minispark"><div class="col-md-12 input-group input-group-lg squarer"><span class="input-group-addon sparkaddon">?</span><input type="text" class="form-control" placeholder="Type question here..."></div><div class="col-md-12" style="height: 7px"></div><div class="col-md-12 subminispark"><div class="col-md-6 pull-left input-group"><span class="input-group-addon">A1</span><input type="text" class="form-control" placeholder="Answer..."></div><div class="col-md-6 pull-right text-right input-group squarer"><input type="text" class="form-control" placeholder="Answer..."><span class="input-group-addon">A2</span></div></div><div class="col-md-12" style="height: 7px"></div><div class="col-md-12"><button class="btn btn-lg marg-auto sparkbuttonn">Spark</button></div></div><div class="col-md-12"><br></br></div>');
+    $('textarea').autosize();
 
 };
 
@@ -437,6 +442,13 @@ var replyController = function() {
         }
         $('#replybutton').remove();
     });
+};
+
+//Minispark controller
+var minisparkController = function() {
+
+
+
 };
 
 //Processes once the page has launched
