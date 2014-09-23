@@ -30,9 +30,6 @@ var scaler = function() {
     $('#mayn').height(maynheight+'px');
     $('#stats').height(statsheight+'px');
     $('#premayn').height(premaynheight+'px');
-    
-    console.log("Window: " + windowheight);
-    console.log("Sum: " + (headerHeight+resultsheight+doneheight+whyheight+premaynheight));
 
 };
 
@@ -40,8 +37,6 @@ var scaler = function() {
 var setBar = function(target, reference, leftVal, rightVal) {
     var actualWidth = $(target).width();
     var newWidth = ((leftVal) / (leftVal + rightVal)) * 2 * actualWidth;
-    console.log("Actual: "+actualWidth);
-    console.log("New: "+newWidth);
     $(target).animate({
         width: newWidth
     }, 400, 'easeOutCubic');
@@ -146,6 +141,7 @@ var loadReplySection = function(id) {
 var lcommentClicker = function(i) {
     return function(event) {
         if(postWhy == true) {
+
             
             //if the clicked comments is the currently active one, turn it off
             if (commentAlreadyClicked == true && $('#c' + leftComments[i]).hasClass('csparkleft') ) {
@@ -187,7 +183,6 @@ var lcommentClicker = function(i) {
 
      }
  }
- console.log('Ahem...');
 };
 
 //Displays ReplySection and calls loadReplySection to fill it (for right comments)
@@ -235,7 +230,6 @@ var rcommentClicker = function(i) {
 
      }
  }
- console.log('Ahem...');
 };
 
 //Detects when comments are clicked and calls appropriate handler
@@ -271,7 +265,7 @@ var loadQuestionData = function(Data) {
     $('.percent-right').text(Math.round(BPercent) + '%');
     $('.votes-left').text('(' + Data.AVotes + ' Votes)');
     $('.votes-right').text('(' + Data.BVotes + ' Votes)');
-    $('.question-nav').text('FACT: ' + Data.facts[0].text);
+    //$('.question-nav').text('FACT: ' + Data.facts[0].text);
 };
 
 //Sets up user comment input based on the way they voted (stance)
@@ -346,6 +340,7 @@ var mainVote = function() {
                 {
                 }
             });
+            Data.AVotes += 1;
             loadPreMain('left');
             generatePreCommentDivs(Data, 'left');
             setTimeout(function() {
@@ -373,6 +368,7 @@ var mainVote = function() {
                 }
             });
             
+            Data.BVotes += 1;
             generatePreCommentDivs(Data, 'right');
             loadPreMain('right');
             
@@ -407,6 +403,21 @@ var commentController = function() {
                 if (vote == 'A') {
 
                     if(temptext) {
+
+                        $.ajax({
+                            url : "11/userreason",
+                            type: "POST",
+                            data: {stance: "A", text: temptext},
+                            success: function(data, textStatus, jqXHR)
+                            {
+                                
+                            },
+                            error: function (jqXHR, textStatus, errorThrown)
+                            {
+
+                            }
+                        });
+
                     $('#leftcomments').append('<div class="cbox cboxleft ccommentleft" id="c' + (Data.comments.length) + '"><p>' + temptext + '</p></div><div class="infobox"><div class="approvalbar leftcol pull-left" id="ab' + (Data.comments.length) + '"></div><p class="commentnum pull-right text-right" id="' + 12 + '">' + 0 + '</p></div>');
                     leftComments.push(Data.comments.length);
                     }
@@ -416,12 +427,24 @@ var commentController = function() {
                 } else if (vote == 'B') {
 
                     if(temptext) {
+
+                        $.ajax({
+                            url : "11/userreason",
+                            type: "POST",
+                            data: {stance: "B", text: temptext},
+                            success: function(data, textStatus, jqXHR)
+                            {
+                            },
+                            error: function (jqXHR, textStatus, errorThrown)
+                            {
+                            }
+                        });
+
                     $('#rightcomments').append('<div class="cbox cboxright ccommentright" id="userreasonlocked"><p>' + temptext + '</p></div><div class="infobox"><div class="approvalbar rightcol pull-right" id="ab' + (Data.comments.length) + '"></div><p class="commentnum pull-left text-left" id="' + 12 + '">' + 0 + '</p></div><br>');
                     rightComments.push((Data.comments.length));
                 }
                     loadMain('right');
                 }
-                console.log("TExt = "+temptext);
                 postWhy = true;
                 done = true;
             }
@@ -439,6 +462,41 @@ var replyController = function() {
 
     $(document.body).on('click', '#leftie', function() {
         stance = 'A';
+        console.log(commentThatsBeenClicked);
+        $.ajax({
+            url : "/11/minivote",
+            type: "POST",
+            data: { comment_id: commentThatsBeenClicked, direction: "up" },
+            success: function(data, textStatus, jqXHR)
+            {
+            },
+            error: function (jqXHR, textStatus, errorThrown)
+            {
+            }
+        });
+        //'SEND JSON OF VOTE ON COMMENT TO DATABASE' CODE HERE
+    });
+
+    $(document.body).on('click', '#rightie', function() {
+        stance = 'B';
+        console.log(commentThatsBeenClicked);
+        $.ajax({
+            url : "11/minivote",
+            type: "POST",
+            data: { comment_id: commentThatsBeenClicked, direction: "down" },
+            success: function(data, textStatus, jqXHR)
+            {
+            },
+            error: function (jqXHR, textStatus, errorThrown)
+            {
+            }
+        });
+        //'SEND JSON OF VOTE ON COMMENT TO DATABASE' CODE HERE
+    });
+
+    /*
+    $(document.body).on('click', '#leftie', function() {
+        stance = 'A';
         $('#here').after('<textarea id="replyreason" class="ffor form-control" placeholder="Why...?"></textarea><button id="replybutton" class="btn btn-md text-center" style="width: 70%">Spark</button><div class="col-md-12" style="height: 7px"></div>');
         $('textarea').autosize();
         //'SEND JSON OF VOTE ON COMMENT TO DATABASE' CODE HERE
@@ -452,19 +510,17 @@ var replyController = function() {
     });
 
     $(document.body).on('click', '#replybutton', function() {
-        console.log(stance);
         var temptext = $('#replyreason').val();
         //'SEND JSON OF REPLY TO DB' CODE HERE
         if (stance == 'A') {
-            console.log("cooom");
             $('#replyreason').replaceWith('<div class="rreply pull-left ffor"><p><span>[+]</span> ' + temptext + '</p></div>');
         }
         if (stance == 'B') {
-            console.log("Booh");
             $('#replyreason').replaceWith('<div class="rreply pull-right aagainst"><p><span>[-]</span> ' + temptext + '</p></div>');
         }
         $('#replybutton').remove();
     });
+*/
 };
 
 //Minispark controller
@@ -492,15 +548,6 @@ $(document).ready(function() {
         dataType: 'json',
         success: function(data) {
             Data = data;
-            console.log(Data.text);
-            console.log(Data.A);
-            console.log(Data.B);
-            console.log(Data.AMax);
-            console.log(Data.BMax);
-            console.log(Data.AMin);
-            console.log(Data.BMin);
-            console.log(Data.AVotes);
-            console.log(Data.BVotes);
         },
         error: function (XMLHttpRequest, textStatus, errorThrown) {
             console.log('error', errorThrown);
@@ -512,7 +559,7 @@ $(document).ready(function() {
         generateCommentDivs(Data);
         loadQuestionData(Data);
         commentHandlerPre();
-    }, 100);
+    }, 500);
 
     //Detects when vote on main question is made and does it's magic
     mainVote();

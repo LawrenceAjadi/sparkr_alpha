@@ -69,17 +69,62 @@ router.post('/11/uservote', function(req, res) {
   }
 });
 
+
+//When user submits comments they wrote, aim here
+router.post('/11/userreason', function(req, res) {
+  var db = req.db;
+  var collection = db.get('tester');
+  var curNum;
+
+  collection.findOne({"id": 1}, function(err, cursor) {
+  	curNum = cursor.curCommentNum;
+  	console.log(cursor.curCommentNum);
+
+  	collection.update({"id": 1}, { $push : { "comments": {"id": curNum, "text": req.body.text, "stance": req.body.stance, "uVotes": 0, "dVotes": 0, "replies": [] } } })
+    collection.update({"id": 1}, { $inc : { "curCommentNum": 1 } });
+
+  })
+
+  
+
+});
+
 /*
-//When user submits comments they wrote/agreed with, aim here
+//When user submits comments agreed with, aim here
 router.post('/:id/reasons', function(req, res) {
 
 });
+*/
 
-//When user upvotes/downvotes individual comments
-router.post('/:id/minivote', function(req,res) {
+//need to know which comment is in question here. save a local variable at client
+//and then use this to aim at the right comment
+router.post('/11/minivote', function(req,res) {
+  var db = req.db;
+  var collection = db.get('tester');
+
+  var tempu = 'comments.'+(req.body.comment_id-1)+'.uVotes';
+  var tempd = "comments."+(req.body.comment_id-1)+".dVotes";
+
+  var incu = {};
+  incu[tempu] = 1;
+
+  var incd = {};
+  incd[tempd] = 1;
+  
+  if(req.body.direction == "up") {
+
+  	collection.update({ "id": 1 }, { $inc : incu });
+
+  } else if(req.body.direction == "down") {
+
+  	collection.update({ "id": 1 }, { $inc : incd });
+
+  }
 
 });
 
+
+/*
 //When user sparks debate, store that in main poll json
 router.post('/:id/spark', function(req,res) {
 
